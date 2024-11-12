@@ -1,13 +1,14 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main-title {
+  @apply bg-clip-text bg-minus bg-big  bg-gradient-to-r from-purple-800 via-green-600 to-orange-300 text-transparent animate-gradient whitespace-nowrap text-2xl  md:text-4xl lg:text-8xl font-bold tracking-widest uppercase;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.input-form {
+  @apply w-full p-3 bg-slate-800/55 rounded-sm placeholder:text-gray-500 shadow-md shadow-purple-800/80 outline-none transition-all duration-150 focus:rounded-md focus:border-[1px] border-purple-600 text-white placeholder:capitalize;
+}
+.select-form {
+  @apply w-full p-3 bg-slate-800/80 rounded-sm placeholder:text-gray-500 shadow-md cursor-pointer outline-none transition-all duration-150 focus:rounded-md focus:border-[1px] border-purple-600 hover:bg-purple-600 text-white placeholder:capitalize;
 }
